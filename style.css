@@ -49,6 +49,11 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 body {
   margin: var(--header-height) 0 0 0;
@@ -146,7 +151,7 @@ img {
   color: var(--white-color);
 }
 .nav__logo {
-  color: var(--white-color); 
+  color: var(--white-color);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -264,7 +269,7 @@ img {
   color: var(--white-color);
 }
 .skills__img img {
-  border-radius: 0.5rem; 
+  border-radius: 0.5rem;
 }
 /* Portfolio */
 .portfolio {
@@ -380,7 +385,7 @@ footer {
     width: 165px;
     height: auto;
   }
-  li.about__text{
+  li.about__text {
     margin-bottom: var(--mb-1);
     font-size: var(--small-font-size);
     color: var(--dark-color);
@@ -395,19 +400,19 @@ footer {
   .portfolio__container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 2rem; 
+    column-gap: 2rem;
   }
   .contact__container {
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(1, 1fr);
   }
-  .footer__container{
-    justify-content: center; 
-    grid-template-columns: repeat(3,1fr);
+  .footer__container {
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width:1024px){
-  .bd-grid{
+@media screen and (min-width: 1024px) {
+  .bd-grid {
     margin: 0 auto;
   }
 }
