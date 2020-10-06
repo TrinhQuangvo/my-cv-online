@@ -1,4 +1,4 @@
-// MENU SHOWING
+// hiển thị menu
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId);
   const nav = document.getElementById(navId);
@@ -11,7 +11,7 @@ const showMenu = (toggleId, navId) => {
 };
 showMenu("nav-toggle", "nav-menu");
 
-// remove menu mobile
+// xóa menu mobile
 const navLink = document.querySelectorAll(".nav__link");
 
 function linkAction() {
@@ -93,17 +93,17 @@ class TypeWriter {
   }
 
   type() {
-    // Current index of word
+    // chỉ số hiện tại 
     const current = this.wordIndex % this.words.length;
     // Get full text of current word
     const fullTxt = this.words[current];
 
-    // Check if deleting
+    // kiểm tra nếu đang xóa 
     if (this.isDeleting) {
-      // Remove char
+      // xóa ký tự
       this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
-      // Add char
+      // thêm ký tự
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
@@ -135,14 +135,12 @@ class TypeWriter {
   }
 }
 
-// Init On DOM Load
 document.addEventListener("DOMContentLoaded", init);
-
-// Init App
+ 
 function init() {
   const txtElement = document.querySelector(".txt-type");
   const words = JSON.parse(txtElement.getAttribute("data-words"));
   const wait = txtElement.getAttribute("data-wait");
-  // Init TypeWriter
+ 
   new TypeWriter(txtElement, words, wait);
 }
