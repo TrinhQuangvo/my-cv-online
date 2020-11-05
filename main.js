@@ -50,7 +50,7 @@ const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
   duration: 1500,
-  reset: false,
+  reset: true,
 });
 
 /*SCROLL HOME*/
