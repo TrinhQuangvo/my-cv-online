@@ -93,12 +93,12 @@ class TypeWriter {
   }
 
   type() {
-    // chỉ số hiện tại 
+    // chỉ số hiện tại
     const current = this.wordIndex % this.words.length;
     // Get full text of current word
     const fullTxt = this.words[current];
 
-    // kiểm tra nếu đang xóa 
+    // kiểm tra nếu đang xóa
     if (this.isDeleting) {
       // xóa ký tự
       this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -136,11 +136,11 @@ class TypeWriter {
 }
 
 document.addEventListener("DOMContentLoaded", init);
- 
+
 function init() {
   const txtElement = document.querySelector(".txt-type");
   const words = JSON.parse(txtElement.getAttribute("data-words"));
   const wait = txtElement.getAttribute("data-wait");
- 
+
   new TypeWriter(txtElement, words, wait);
 }
