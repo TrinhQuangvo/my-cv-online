@@ -119,7 +119,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background: linear-gradient(90deg, rgba(97,215,152,0.49653364763874297) 0%, rgba(138,143,201,0.6449930313922444) 50%, rgba(44,76,213,0.4209033955379027) 100%);
+  background: var(--first-color);
 }
 /* NAV */
 .nav {
@@ -177,7 +177,7 @@ img {
 /* HoME */
 .home {
   position: relative;
-  background: url('./assets/img/pexels-lumn-167699.jpg') no-repeat  ;
+  background: var(--first-color)  ;
   background-size: 100%;
   background-attachment: fixed;
   background-position: center center;
